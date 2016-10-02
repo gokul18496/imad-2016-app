@@ -5,20 +5,80 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+    title:'Article One',
+    heading: 'Article 1',
+    content: `            <p>
+                Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!
+            </p>
+            <p>
+                Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!
+            </p>
+            <p>
+                Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!Hi! Some New Text. Cheap Thrills !!!
+            </p>`
+};
+
+var articleTwo = {
+    title:'Article Two',
+    heading: 'Article 2',
+    content: 'This is article 2'
+};
+
+var articleThree = {
+    title:'Article Three',
+    heading: 'Article 3',
+    content: 'This is article threeee'
+};
+
+function createTemplate(data){
+    
+        var title = data.title;
+        var heading = data.heading;
+        var content = data.content;
+        
+        var htmlTemplate = 
+            `
+            <html>
+            <head>
+                <title>
+                  ${title}
+                </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <link href="/ui/style.css" rel="stylesheet" />
+            </head>
+            
+            <body>
+                <div class="container">
+                    <div>
+                        <a href="/">Home</a>
+                    </div>
+                    <hr />
+                    <h3>
+                    ${heading}
+                    </h3>
+                    ${content}
+                </div>    
+            </body>
+        </html>
+        `;
+        return htmlTemplate;
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one', function(req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html')); 
+   res.send(createTemplate(articleOne)); 
 });
 
 app.get('/article-two', function(req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html')); 
+   res.send(createTemplate(articleTwo)); 
 });
 
 app.get('/article-three', function(req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html')); 
+   res.send(createTemplate(articleThree)); 
 });
 
 
