@@ -40,7 +40,7 @@ function move(){
     } else if(marginTop === 0){
         reachedBottom = false;
     }
-    if(marginTop > 0 && marginTop < 100 && reachedBottom === false){
+    if(marginTop >= 0 && marginTop <= 100 && reachedBottom === false){
         marginTop = marginTop + 10;
     } else {
         marginTop = marginTop - 10;
