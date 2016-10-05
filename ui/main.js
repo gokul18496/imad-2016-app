@@ -53,6 +53,7 @@ mainText.onclick = function(){
     if(clickToggle){
         clearInterval(interval);
         clickToggle = false;
+         marginTop = 0;
     } else {
         var interval = setInterval(move, 100);
         clickToggle = true;
