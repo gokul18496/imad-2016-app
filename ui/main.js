@@ -41,7 +41,7 @@ mainText.onmousemove = function(){
     } else if(mainText.style.marginDown === "100px"){
         moveDown();    
     } else {
-        moveTop();
+        moveDown();
     }
 };
 
