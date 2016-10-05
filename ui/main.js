@@ -36,9 +36,9 @@ var marginDown = 0;
 
 mainText.onmousemove = function(){
     console.log('hovering');
-    if(mainText.style.marginTop === "100px") {
+    if(marginTop > 100) {
         moveTop();
-    } else if(mainText.style.marginDown === "100px"){
+    } else if(marginDown > 100){
         moveDown();    
     } else {
         moveDown();
@@ -60,3 +60,4 @@ function moveTop() {
     marginDown = marginDown + 10;
     mainText.style.marginDown = marginDown + "px";
 }
+*/
