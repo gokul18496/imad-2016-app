@@ -31,7 +31,7 @@ img.onclick = function(){
     }
 };
 
-mainText.onhover = function(){
+mainText.onmouseover = function(){
     console.log('hovering');
     moveRight();
     /*
