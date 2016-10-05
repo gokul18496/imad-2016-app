@@ -31,14 +31,19 @@ img.onclick = function(){
     }
 };
 
-mainText.onmousemove = function(){
-    console.log('hovering');
-    console.log(event.clientY);
-    mainText.style.marginBottom= (event.clientY - 350) + "px";
+var marginTop = 0;
+
+function move(){
+    if(marginTop >= 100){
+        marginTop = marginTop - 10;
+    } else if(marginTop <= 0) {
+         marginTop = marginTop + 10;
+    }
+    mainText.style.marginTop = marginTop + "px";   
+}
+
+mainText.onclick = function(){
+    var interval = setInterval(move, 100);
 };
 
-mainText.onmouseout = function(){
-    console.log('leaving text');
-    
-};
 
