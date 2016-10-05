@@ -45,7 +45,7 @@ mainText.onmousemove = function(){
     }
 };
 
-mainText.onmousemove = function(){
+mainText.onmouseout = function(){
     console.log('leaving text');
     var marginTop = 0;
     var marginDown = 0;
