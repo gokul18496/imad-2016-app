@@ -38,6 +38,8 @@ function move(){
         marginTop = marginTop - 10;
     } else if(marginTop <= 0) {
          marginTop = marginTop + 10;
+    } else {
+        marginTop = marginTop + 10;
     }
     mainText.style.marginTop = marginTop + "px";   
 }
