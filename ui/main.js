@@ -31,35 +31,13 @@ img.onclick = function(){
     }
 };
 
-var marginTop = 0;
-var marginDown = 0;
-
 mainText.onmousemove = function(){
     console.log('hovering');
-    if(marginTop > 100) {
-        moveTop();
-        console.log('1: ' + marginTop + ':' +  marginDown );
-    } else if(marginDown > 100){
-        moveDown();    
-        console.log('2: ' + marginTop + ':' +  marginDown );
-    } else {
-        moveDown();
-        console.log('3: ' + marginTop + ':' +  marginDown );
-    }
+    mainText.style.marginTop = event.clientY;
 };
 
 mainText.onmouseout = function(){
     console.log('leaving text');
-    var marginTop = 0;
-    var marginDown = 0;
+    
 };
 
-function moveDown() {
-    marginTop = marginTop + 10;
-    mainText.style.marginTop = marginTop + "px";
-}
-
-function moveTop() {
-    marginDown = marginDown + 10;
-    mainText.style.marginDown = marginDown + "px";
-}
