@@ -31,6 +31,8 @@ img.onclick = function(){
 };
 
 mainText.onhover = function(){
+    moveRight();
+    /*
     if(mainText.style.marginRight > 100) {
         moveRight();
     } else if(mainText.style.marginLeft > 100) {
@@ -38,6 +40,7 @@ mainText.onhover = function(){
     } else {
         moveLeft();
     }
+    */
 };
 
 function moveRight() {
