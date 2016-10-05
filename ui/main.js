@@ -33,19 +33,22 @@ img.onclick = function(){
 
 var marginTop = 0;
 var marginDown = 0;
-
+console.log(mainText.style.marginTop + " " + mainText.style.marginDown);
 mainText.onmousemove = function(){
     console.log('hovering');
-    moveDown();
-    /*
-    if(mainText.style.marginRight > 100) {
-        moveRight();
-    } else if(mainText.style.marginLeft > 100) {
-        moveRight();
+    if(mainText.style.marginTop === "100px") {
+        moveTop();
+    } else if(mainText.style.marginDown === "100px"){
+        moveDown();    
     } else {
-        moveLeft();
+        moveTop();
     }
-    */
+};
+
+mainText.onmousemove = function(){
+    console.log('leaving text');
+    var marginTop = 0;
+    var marginDown = 0;
 };
 
 function moveDown() {
