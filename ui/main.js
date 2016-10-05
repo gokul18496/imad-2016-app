@@ -49,7 +49,7 @@ function move(){
 }
 
 mainText.onclick = function(){
-    var interval = setInterval(move, 1000);
+    var interval = setInterval(move, 10);
 };
 
 
