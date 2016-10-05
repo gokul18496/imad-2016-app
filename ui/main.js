@@ -60,4 +60,3 @@ function moveTop() {
     marginDown = marginDown + 10;
     mainText.style.marginDown = marginDown + "px";
 }
-*/
