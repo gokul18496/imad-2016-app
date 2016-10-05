@@ -33,7 +33,7 @@ img.onclick = function(){
 
 var marginTop = 0;
 var marginDown = 0;
-console.log(mainText.style.marginTop + " " + mainText.style.marginDown);
+
 mainText.onmousemove = function(){
     console.log('hovering');
     if(mainText.style.marginTop === "100px") {
