@@ -51,7 +51,7 @@ function move(){
 
 mainText.onclick = function(){
     if(clickToggle){
-        clearInterval();
+        clearInterval(interval);
         clickToggle = false;
     } else {
         var interval = setInterval(move, 100);
