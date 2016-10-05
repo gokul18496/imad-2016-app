@@ -33,7 +33,8 @@ img.onclick = function(){
 
 mainText.onmousemove = function(){
     console.log('hovering');
-    mainText.style.marginTop = event.clientY;
+    console.log(event.clientY);
+    mainText.style.marginTop = event.clientY + "px";
 };
 
 mainText.onmouseout = function(){
