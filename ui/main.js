@@ -31,7 +31,7 @@ img.onclick = function(){
     }
 };
 
-var marginTop = 10;
+var marginTop = 0;
 var reachedBottom = false;
 
 function move(){
