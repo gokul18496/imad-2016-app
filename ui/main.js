@@ -31,9 +31,12 @@ img.onclick = function(){
     }
 };
 
+var marginTop = 0;
+var marginDown = 0;
+
 mainText.onmousemove = function(){
     console.log('hovering');
-    moveRight();
+    moveDown();
     /*
     if(mainText.style.marginRight > 100) {
         moveRight();
@@ -45,13 +48,12 @@ mainText.onmousemove = function(){
     */
 };
 
-function moveRight() {
-    mainText.style.marginLeft = mainText.style.marginLeft + 10;
-    mainText.style.marginLeft = mainText.style.marginLeft + "px";
+function moveDown() {
+    marginTop = marginTop + 10;
+    mainText.style.marginTop = marginTop + "px";
 }
 
-function moveLeft() {
-    mainText.style.marginRight = mainText.style.marginRight +  10;
-    mainText.style.marginRight = mainText.style.marginRight + "px";
+function moveTop() {
+    marginDown = marginDown + 10;
+    mainText.style.marginDown = marginDown + "px";
 }
-
