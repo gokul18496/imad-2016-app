@@ -31,6 +31,7 @@ img.onclick = function(){
 };
 
 mainText.onhover = function(){
+    console.log('hovering');
     moveRight();
     /*
     if(mainText.style.marginRight > 100) {
