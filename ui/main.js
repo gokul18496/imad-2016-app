@@ -52,10 +52,10 @@ function move(){
 mainText.onclick = function(){
     if(clickToggle){
         clearInterval();
-        clickToggle = true;
+        clickToggle = false;
     } else {
         var interval = setInterval(move, 100);
-        clickToggle = false;
+        clickToggle = true;
     }
     
 };
