@@ -32,14 +32,16 @@ img.onclick = function(){
 };
 
 var marginTop = 0;
+var reachedBottom = false;
 
 function move(){
-    if(marginTop >= 100){
-        marginTop = marginTop - 10;
-    } else if(marginTop <= 0) {
-         marginTop = marginTop + 10;
-    } else {
+    if(marginTop === 100){
+        reachedBottom = true;
+    }
+    if(marginTop >= 0 && marginTop <= 100 && reachedBottom === false){
         marginTop = marginTop + 10;
+    } else {
+        marginTop = marginTop - 10;
     }
     mainText.style.marginTop = marginTop + "px";   
 }
