@@ -52,8 +52,5 @@ mainText.onclick = function(){
         var interval = setInterval(move, 100);
 };
 
-mainText.onmouseout = function(){
-        clearInterval(interval);
-};
 
 
