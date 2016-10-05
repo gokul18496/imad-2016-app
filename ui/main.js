@@ -12,6 +12,7 @@ var pos = 0;
 var dir = 1;
 var img = document.getElementById('madi');
 img.onclick = function(){
+    console.log('clicking');
     if(pos === 0 && dir === 1){
         img.style.marginLeft = "200px";
         pos = 1;
