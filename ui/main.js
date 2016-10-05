@@ -31,12 +31,14 @@ img.onclick = function(){
     }
 };
 
-var marginTop = 0;
+var marginTop = 10;
 var reachedBottom = false;
 
 function move(){
     if(marginTop === 100){
-        reachedBottom = true;
+        reachedBottom = true; 
+    } else if(marginTop === 0){
+        reachedBottom = false;
     }
     if(marginTop >= 0 && marginTop <= 100 && reachedBottom === false){
         marginTop = marginTop + 10;
