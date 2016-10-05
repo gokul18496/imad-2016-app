@@ -38,10 +38,13 @@ mainText.onmousemove = function(){
     console.log('hovering');
     if(marginTop > 100) {
         moveTop();
+        console.log('1: ' + marginTop + ':' +  marginDown );
     } else if(marginDown > 100){
         moveDown();    
+        console.log('2: ' + marginTop + ':' +  marginDown );
     } else {
         moveDown();
+        console.log('3: ' + marginTop + ':' +  marginDown );
     }
 };
 
