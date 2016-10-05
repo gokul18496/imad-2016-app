@@ -33,6 +33,7 @@ img.onclick = function(){
 
 var marginTop = 0;
 var reachedBottom = false;
+var clickToggle = false;
 
 function move(){
     if(marginTop === 100){
@@ -49,7 +50,14 @@ function move(){
 }
 
 mainText.onclick = function(){
-    var interval = setInterval(move, 100);
+    if(clickToggle){
+        clearInterval();
+        clickToggle = true;
+    } else {
+        var interval = setInterval(move, 100);
+        clickToggle = false;
+    }
+    
 };
 
 
