@@ -1,10 +1,9 @@
 console.log('Loaded!');
 
 setTimeout(changeMainText, 1000);
-
+var mainText = document.getElementById('main-text');
 function changeMainText() {
-    var element = document.getElementById('main-text');
-    element.innerHTML = `Hi! Some New Text.
+    mainText.innerHTML = `Hi! Some New Text.
                         Cheap Thrills !!!
                         Cold Water !!!`
 }
@@ -30,3 +29,24 @@ img.onclick = function(){
         dir = 1;
     }
 };
+
+mainText.onhover = function(){
+    if(mainText.style.marginRight > 100) {
+        moveRight();
+    } else if(mainText.style.marginLeft > 100) {
+        moveRight();
+    } else {
+        moveLeft();
+    }
+};
+
+function moveRight() {
+    mainText.style.marginLeft = mainText.style.marginLeft + 10;
+    mainText.style.marginLeft = mainText.style.marginLeft + "px";
+}
+
+function moveLeft() {
+    mainText.style.marginRight = mainText.style.marginRight +  10;
+    mainText.style.marginRight = mainText.style.marginRight + "px";
+}
+
