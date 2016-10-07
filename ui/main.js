@@ -1,3 +1,23 @@
+//Counter Code
+var button = document.getElementById("counter");
+var span = document.getElementById("count");
+
+button.onclick = function(){
+  var request = new XMLHttpRequest();
+  
+  request.onreadystatechange = function(){
+      if(request.readyState === XMLHttpRequest.DONE){
+          if(request.status === 200){
+                var counter = request.responseText;
+                span.innerHTML = counter.toString();
+          }
+      }
+  };
+  
+  request.open('GET', "http://gokul18496.imad.hasura-app.io/counter");
+};
+
+/*
 console.log('Loaded!');
 
 setTimeout(changeMainText, 1000);
@@ -52,5 +72,6 @@ mainText.onclick = function(){
         var interval = setInterval(move, 100);
 };
 
+*/
 
 
