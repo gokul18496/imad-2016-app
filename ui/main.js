@@ -23,7 +23,6 @@ var nameInput = document.getElementById('name');
 var submit = document.getElementById('submit');
 submit.onclick = function() {
    var request = new XMLHttpRequest();
-   var name = nameInput.value;
    request.onreadystatechange = function(){
       if(request.readyState === XMLHttpRequest.DONE){
           if(request.status === 200){
@@ -38,9 +37,11 @@ submit.onclick = function() {
              ul.innerHTML = list;
         }
       }
-   };
-      request.open('GET', "http://gokul18496.imad.hasura-app.io/submit-name/" + name, true);
-      request.send(null);
+      
+     };
+    var name = nameInput.value;
+    request.open('GET', "http://gokul18496.imad.hasura-app.io/submit-name/" + name, true);
+    request.send(null);
 
 };
 
